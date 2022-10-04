@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tangerine">
+</head>
+<body>
+    <div class="cabecario">
+        <header>
+            <h1><img src="Vector.png" alt="Logo" onclick="home()"></h1>
+        </header>
+    </div>
+    <main>   
+       <fieldset>
+        <textarea id="codificadorDesc" cols="30" rows="10" class="input-padrao" placeholder="Digite seu texto"></textarea>
+        <input type="button" value="Criptografar" onclick="codifica()" class="botao-cripto">
+        <input type="button" value="Desencriptar" onclick="decodifica()" class="botao-descripto">
+       </fieldset>
+        <section class="message-box">
+            <div id="div-desaparece" class="message-box-div">
+                <img src="High quality products 1 1.png">
+                <h2>Nenhuma mensagem encontrada</h2>
+                <h3>Digite um texto que você deseja criptografar ou descriptografar</h3>
+            </div>
+       
+            <div id="div-aparece">
+                <textarea id="codificado" cols="15" rows="22" class="input-cod" placeholder="Nenhuma mensagem"></textarea>
+                <input type="submit" class="btn-copiar" id="btn-copiar" value="Copiar" onclick="copiar()">
+            </div>
+        </section>
+    </main>
+</body>
+
+<script>
+     var myStr =  document.getElementById("codificadorDesc").value;
+     document.getElementById("div-aparece").style.display = 'none'
+        function codifica(){
+        myStr =  document.getElementById("codificadorDesc").value;
+        var newStr = myStr.replace(/e/g, 'enter').replace(/i/g, 'imes').replace(/a/g, 'ai').replace (/o/g, 'ober').replace (/u/g, 'ufat');
+        document.getElementById("codificado").value = newStr;
+        aparece();
+    }
+    
+    function decodifica(){
+        myStr =  document.getElementById("codificadorDesc").value;
+        var newStr = myStr.replace(/enter/g,'e').replace(/imes/g, 'i').replace(/ai/g,'a').replace(/ober/g,'o').replace(/ufat/g,'u');
+
+        document.getElementById('codificado').value = newStr;
+        aparece();
+    }
+
+    function copiar(){
+        var copiar = document.getElementById("codificado");
+        navigator.clipboard.writeText(copiar.value)
+        copiar.value=""
+    }
+    function aparece() {
+        document.getElementById("div-desaparece").style.display = 'none';
+        document.getElementById("div-aparece").style.display = 'inline';
+    }
+
+    function home() {
+        document.getElementById("div-aparece").style.display = 'none';
+        document.getElementById("div-desaparece").style.display = 'inline';
+    }
+</script>
+</html>
