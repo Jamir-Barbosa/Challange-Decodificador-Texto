@@ -17,10 +17,13 @@
     </div>
     <main>   
        <fieldset>
+        
         <textarea id="codificadorDesc" cols="30" rows="10" class="input-padrao" placeholder="Digite seu texto"></textarea>
-        <input type="button" value="Criptografar" onclick="codifica()" class="botao-cripto">
-        <input type="button" value="Desencriptar" onclick="decodifica()" class="botao-descripto">
-       </fieldset>
+        <div class="div-botao">
+            <input type="button" value="Criptografar" onclick="codifica()" class="botao-cripto">
+            <input type="button" value="Desencriptar" onclick="decodifica()" class="botao-descripto">
+        </div>   
+    </fieldset>
         <section class="message-box">
             <div id="div-desaparece" class="message-box-div">
                 <img src="High quality products 1 1.png">
@@ -33,6 +36,7 @@
                 <input type="submit" class="btn-copiar" id="btn-copiar" value="Copiar" onclick="copiar()">
             </div>
         </section>
+        <footer></footer>
     </main>
 </body>
 

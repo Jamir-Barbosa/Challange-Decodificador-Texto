@@ -1,50 +1,17 @@
 body{
     background: #F3F5FC;
 }
-header{
-    padding: 20px 0;
-    
-}
-
 header h1{
-    font-size: 70px;
-    font-family: 'Tangerine' , sans-serif;
-    margin-left: 1em;
-    font-weight: bold;
-    color: rgba(221, 19, 19, 0.897);
-    padding: 10px;
-}
-
-.cabecario{
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-}
-
-nav{
     position: absolute;
-    top: 70px;
-    right: 30px;
-}
-
-nav li{
-    display: inline;
-    margin: 0 0 0 15px;
-}
-
-nav a{
-    text-transform: uppercase;
-    color: rgba(221, 19, 19, 0.897);
-    font-weight: bold;
-    font-size: 22px;
-    text-decoration: none;
+    left: 5em;    
+    top: 2em;
 }
 
 .input-padrao {
     position: absolute;
-    width: 600px;
-    height: 300px;
-    left: 15%;
+    width: 900px;
+    height: 450px;
+    left: 10%;
     top: 168px;
     
     font-size: 32px;
@@ -71,10 +38,10 @@ outline: none;
 
 .input-cod{
     position: absolute;
-    width: 350px;
-    height: 500px;
-    left: 900px;
-    top: 52px;
+    width: 370px;
+    height: 690px;
+    left: 0;
+    top: 10px;
     font-weight: 600;
     font-size: 22px;
     line-height: 150%;
@@ -82,7 +49,6 @@ outline: none;
     background: #FFFFFF;
     resize: none;
     border: none;
-    background: transparent;
     color:#495057;
     text-align: justify;
     padding: 25px;
@@ -90,9 +56,10 @@ outline: none;
     border-radius: 32px;
 }
 
-.input-cod:focus{
+.input-cod:focus,select{
     border: none;
     outline: none;
+    
 }
 
 .botao-cripto{
@@ -102,8 +69,8 @@ outline: none;
     padding: 24px;
     position: absolute;
     width: 336px;
-    left: 100px;
-    top: 500px;
+    left: 200px;
+    top: 680px;
     border: #0A3871;
     box-sizing: border-box;
     border-radius: 24px;
@@ -130,8 +97,8 @@ outline: none;
     padding: 24px;
     position: absolute;
     width: 336px;
-    left: 500px;
-    top: 500px;
+    left: 650px;
+    top: 680px;
     border: #0A3871;
     box-sizing: border-box;
     border-radius: 24px;
@@ -160,8 +127,8 @@ outline: none;
     position: absolute;
     width: 336px;
     height: 67px;
-    left: 927px;
-    top: 480px;
+    left: 30px;
+    top: 780px;
     border: 1px solid #0A3871;
     box-sizing: border-box;
     border-radius: 24px;
@@ -179,15 +146,16 @@ outline: none;
     flex-grow: 1;
     margin: 0px 8px;
     justify-content: center;
+    
 }
 
 .btn-copiar:hover{
     scale: 1.1;
 }
-message-box{
+.message-box{
     position: absolute;
     width: 400px;
-    height: 750px;
+    height: 800px;
     left: 70%;
     top: 20px;
     padding-left: 20px;
@@ -213,10 +181,7 @@ message-box{
     font-size: 27px;
     line-height: 120%;
 
-  
     text-align: center;
-  
-  
   
     color: #343A40;
     background: transparent;
@@ -260,12 +225,123 @@ message-box{
   
   .message-box-div, .message-box-div img {
     padding-top: 40px;
-    background: transparent;
+    background: #FFFFFF;
   }
 
   .message-box-div{
     position: absolute;
-    left: 935px;
+    left: 40px;
     top: 40px;
-    background: transparent;
+    background: #FFFFFF;
   }
+
+  @media only screen and (min-width: 481px) and (max-width: 1023px){ 
+    main{
+        height: 100%;
+    }
+    .input-padrao{
+        width: 45rem;
+        top: 8rem;
+        height: 18rem;
+    }
+    .botao-cripto{
+        width: 35%;
+        top: 30rem;
+        left: 5rem;
+    }
+    .botao-descripto{
+        width: 40%;
+        top: 30rem;
+        left: 28rem;
+    }
+    .message-box{
+        width: 50rem;
+        left: 10px;
+        top: 35rem;
+        height: 72%;
+        padding: 0;
+        
+    }
+    .message-box-div img{
+        display: none;
+    }
+
+    .message-box-div{
+        top: 0.1rem;
+        height: auto;
+        border-radius: 32px;
+        left: 15rem;
+
+
+    }
+
+    .input-cod{
+    width: 47rem;
+}
+    .btn-copiar{
+        width: 90%;
+        top: 8rem;
+        
+    }
+  }
+  
+  @media only screen and (min-device-width : 300px) and (max-device-width : 480px){ 
+    main{
+        height: 100%;
+        width: 100%;
+    }
+    header h1{
+        top: 1rem;
+        left:50%
+    }
+    .input-padrao{
+        width: 20rem;
+        height: 23rem;
+        top: 5rem;
+        left: 1rem;
+        word-wrap: break-word;
+
+    }
+
+    .input-cod{
+        width: 17rem;
+        height: 25rem;
+        left: 0.1rem;
+        top: 0.1rem;
+        margin-bottom: 3px;
+    }
+    .botao-cripto{
+        width: 90%;
+        left: 1rem;
+        top: 30rem;
+    }
+    .botao-descripto{
+        width: 90%;
+        left: 0.6rem;
+        top: 35rem;
+    }
+
+    .message-box{
+        padding: 0;
+        width: 17rem;
+        top: 40rem;
+        left: 1rem;
+        height: 10rem;
+       margin: 10rem,80rem;
+
+    }
+    .message-box-div img{
+        display: none;
+    }
+    .message-box-div{
+        padding: 0;
+        height: 8rem;
+        top: 0.2rem;
+        left: 0.1rem;
+        
+    }
+    .btn-copiar{
+        width: 90%;
+        top: 22rem;
+    }
+}
